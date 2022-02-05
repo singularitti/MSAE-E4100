@@ -1,0 +1,307 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8951,        297]
+NotebookOptionsPosition[      8156,        265]
+NotebookOutlinePosition[      8514,        281]
+CellTagsIndexPosition[      8471,        278]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "0", ",", 
+       RowBox[{"Cos", "[", "beta", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "b", ",", 
+       RowBox[{"c", " ", 
+        RowBox[{
+         RowBox[{"Cos", "[", "gama", "]"}], "/", 
+         RowBox[{"Sin", "[", "gama", "]"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", 
+       RowBox[{"c", " ", 
+        RowBox[{
+         RowBox[{"Sin", "[", "beta", "]"}], "/", 
+         RowBox[{"Sin", "[", "gama", "]"}]}]}]}], "}"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.684622970565447*^9, 3.684623020320972*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ap", "=", 
+  RowBox[{"A", ".", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", 
+     RowBox[{"-", "3"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.68462302524161*^9, 3.68462305202064*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"a", "-", 
+    RowBox[{"3", " ", 
+     RowBox[{"Cos", "[", "beta", "]"}]}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3"}], " ", "c", " ", 
+    RowBox[{"Cot", "[", "gama", "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3"}], " ", "c", " ", 
+    RowBox[{"Csc", "[", "gama", "]"}], " ", 
+    RowBox[{"Sin", "[", "beta", "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6846230312775183`*^9, 3.684623052609291*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bp", "=", 
+  RowBox[{"A", ".", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "1", ",", "1"}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.6846230559822807`*^9, 3.684623065915081*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"5", " ", "a"}], "+", 
+    RowBox[{"Cos", "[", "beta", "]"}]}], ",", 
+   RowBox[{"b", "+", 
+    RowBox[{"c", " ", 
+     RowBox[{"Cot", "[", "gama", "]"}]}]}], ",", 
+   RowBox[{"c", " ", 
+    RowBox[{"Csc", "[", "gama", "]"}], " ", 
+    RowBox[{"Sin", "[", "beta", "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.684623066378171*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cross", "[", 
+  RowBox[{"ap", ",", "bp"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6846230705577087`*^9, 3.684623078179603*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"3", " ", "b", " ", "c", " ", 
+    RowBox[{"Csc", "[", "gama", "]"}], " ", 
+    RowBox[{"Sin", "[", "beta", "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "16"}], " ", "a", " ", "c", " ", 
+    RowBox[{"Csc", "[", "gama", "]"}], " ", 
+    RowBox[{"Sin", "[", "beta", "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"a", " ", "b"}], "-", 
+    RowBox[{"3", " ", "b", " ", 
+     RowBox[{"Cos", "[", "beta", "]"}]}], "+", 
+    RowBox[{"16", " ", "a", " ", "c", " ", 
+     RowBox[{"Cot", "[", "gama", "]"}]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.684623078620935*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Inverse", "[", "A", "]"}], ".", "%"}]], "Input",
+ CellChangeTimes->{{3.684623315107862*^9, 3.6846233230220203`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", " ", "b", " ", "c", " ", 
+       RowBox[{"Csc", "[", "gama", "]"}], " ", 
+       RowBox[{"Sin", "[", "beta", "]"}]}], "a"], "-", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"Cot", "[", "beta", "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", " ", "b"}], "-", 
+         RowBox[{"3", " ", "b", " ", 
+          RowBox[{"Cos", "[", "beta", "]"}]}], "+", 
+         RowBox[{"16", " ", "a", " ", "c", " ", 
+          RowBox[{"Cot", "[", "gama", "]"}]}]}], ")"}], " ", 
+       RowBox[{"Sin", "[", "gama", "]"}]}], 
+      RowBox[{"a", " ", "c"}]]}], ",", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"Cos", "[", "gama", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"a", " ", "b"}], "-", 
+          RowBox[{"3", " ", "b", " ", 
+           RowBox[{"Cos", "[", "beta", "]"}]}], "+", 
+          RowBox[{"16", " ", "a", " ", "c", " ", 
+           RowBox[{"Cot", "[", "gama", "]"}]}]}], ")"}], " ", 
+        RowBox[{"Csc", "[", "beta", "]"}]}], "b"]}], "-", 
+     FractionBox[
+      RowBox[{"16", " ", "a", " ", "c", " ", 
+       RowBox[{"Csc", "[", "gama", "]"}], " ", 
+       RowBox[{"Sin", "[", "beta", "]"}]}], "b"]}], ",", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", " ", "b"}], "-", 
+        RowBox[{"3", " ", "b", " ", 
+         RowBox[{"Cos", "[", "beta", "]"}]}], "+", 
+        RowBox[{"16", " ", "a", " ", "c", " ", 
+         RowBox[{"Cot", "[", "gama", "]"}]}]}], ")"}], " ", 
+      RowBox[{"Csc", "[", "beta", "]"}], " ", 
+      RowBox[{"Sin", "[", "gama", "]"}]}], "c"]}], "}"}], "/.", 
+  RowBox[{"gama", "\[Rule]", 
+   RowBox[{"(", 
+    RowBox[{"Pi", "/", "2"}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.684623343324085*^9, 3.684623351539765*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"a", " ", "b"}], "-", 
+           RowBox[{"3", " ", "b", " ", 
+            RowBox[{"Cos", "[", "beta", "]"}]}]}], ")"}], " ", 
+         RowBox[{"Cot", "[", "beta", "]"}]}], 
+        RowBox[{"a", " ", "c"}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", "b", " ", "c", " ", 
+        RowBox[{"Sin", "[", "beta", "]"}]}], "a"]}], ",", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"16", " ", "a", " ", "c", " ", 
+        RowBox[{"Sin", "[", "beta", "]"}]}], "b"]}], ",", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", " ", "b"}], "-", 
+         RowBox[{"3", " ", "b", " ", 
+          RowBox[{"Cos", "[", "beta", "]"}]}]}], ")"}], " ", 
+       RowBox[{"Csc", "[", "beta", "]"}]}], "c"]}], "}"}], "//", 
+   "FullSimplify"}], "//", "TableForm"}]], "Input",
+ CellChangeTimes->{{3.684623359123212*^9, 3.684623362033471*^9}, {
+  3.684624475875972*^9, 3.684624485216445*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      FractionBox[
+       RowBox[{"b", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "a"}], "+", 
+             RowBox[{"3", " ", 
+              RowBox[{"Cos", "[", "beta", "]"}]}]}], ")"}], " ", 
+           RowBox[{"Cot", "[", "beta", "]"}]}], "+", 
+          RowBox[{"3", " ", 
+           SuperscriptBox["c", "2"], " ", 
+           RowBox[{"Sin", "[", "beta", "]"}]}]}], ")"}]}], 
+       RowBox[{"a", " ", "c"}]]},
+     {
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"16", " ", "a", " ", "c", " ", 
+         RowBox[{"Sin", "[", "beta", "]"}]}], "b"]}]},
+     {
+      FractionBox[
+       RowBox[{"b", " ", 
+        RowBox[{"(", 
+         RowBox[{"a", "-", 
+          RowBox[{"3", " ", 
+           RowBox[{"Cos", "[", "beta", "]"}]}]}], ")"}], " ", 
+        RowBox[{"Csc", "[", "beta", "]"}]}], "c"]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.684623362483931*^9, {3.6846244780376463`*^9, 3.684624485684434*^9}}]
+}, Open  ]]
+},
+WindowSize->{1440, 775},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 696, 21, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1279, 45, 217, 6, 32, "Input"],
+Cell[1499, 53, 459, 13, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1995, 71, 200, 5, 32, "Input"],
+Cell[2198, 78, 398, 12, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2633, 95, 151, 3, 32, "Input"],
+Cell[2787, 100, 606, 16, 32, "Output"]
+}, Open  ]],
+Cell[3408, 119, 151, 3, 32, "Input"],
+Cell[3562, 124, 1889, 52, 92, InheritFromParent],
+Cell[CellGroupData[{
+Cell[5476, 180, 1124, 33, 51, InheritFromParent],
+Cell[6603, 215, 1537, 47, 140, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
