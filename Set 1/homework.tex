@@ -20,152 +20,152 @@
 
 \section*{1}
 \begin{enumerate}[a.]
-    \item A four-fold rotation about the $\bm{a}$-axis is $4 \hkl[1 0 0]$, apply it thrice will be $4^3 \hkl[1 0 0]$.
-    \item A six-fold rotoinversion about the $\bm{c}$-axis is $\bar{6} \hkl[0 0 1]$, apply it thrice will be $\bar{6}^3 \hkl[0 0 1] = m \hkl[0 0 1]$.
-    \item A mirror operation containing both the $\bm{b}$- and $\bm{c}$-axes in hexagonal coordinates will be 
-    $m \hkl[2 1 0]$. As is drawn below.
+        \item A four-fold rotation about the $\bm{a}$-axis is $4 \hkl[1 0 0]$, apply it thrice will be $4^3 \hkl[1 0 0]$.
+        \item A six-fold rotoinversion about the $\bm{c}$-axis is $\bar{6} \hkl[0 0 1]$, apply it thrice will be $\bar{6}^3 \hkl[0 0 1] = m \hkl[0 0 1]$.
+        \item A mirror operation containing both the $\bm{b}$- and $\bm{c}$-axes in hexagonal coordinates will be
+              $m \hkl[2 1 0]$. As is drawn below.
 \end{enumerate}
 
 \newpage
 
 \section*{2}
 \begin{enumerate}[a.]
-    \item A six-fold rotation about the $\bm{c}$-axis is $C_6 \hkl[0 0 1]$, apply it thrice will be $C_6^2 \hkl[0 0 1] = C_3 \hkl[0 0 1]$.
-    \item A four-fold rotation-reflection with rotation about and reflection perpendicular to 
-    the $\bm{c}$-axis is $S_4 \hkl[0 0 1]$, apply it thrice will be $S_4^2 \hkl[0 0 1] = C_2 \hkl[0 0 1]$.
-    \item A mirror plane perpendicular to the $\bm{c}$-axes is $\sigma_h \hkl[0 0 1]$.
-    \item A two-fold rotation about the $\bm{a}$-axis is $C_2 \hkl[1 0 0]$.
+        \item A six-fold rotation about the $\bm{c}$-axis is $C_6 \hkl[0 0 1]$, apply it thrice will be $C_6^2 \hkl[0 0 1] = C_3 \hkl[0 0 1]$.
+        \item A four-fold rotation-reflection with rotation about and reflection perpendicular to
+              the $\bm{c}$-axis is $S_4 \hkl[0 0 1]$, apply it thrice will be $S_4^2 \hkl[0 0 1] = C_2 \hkl[0 0 1]$.
+        \item A mirror plane perpendicular to the $\bm{c}$-axes is $\sigma_h \hkl[0 0 1]$.
+        \item A two-fold rotation about the $\bm{a}$-axis is $C_2 \hkl[1 0 0]$.
 \end{enumerate}
 
 \section*{3}
 \begin{enumerate}[a.]
-    \item For a six-fold rotation axis, each operation will rotate the original point by \SI{60}{\degree}, so it requires $4$ times of rotation.
-    That is to say, the matrix is 
-    \begin{equation}
-        M = \begin{bmatrix}
-                        1 & \bar{1} & 0\\
-                        1 & 0           & 0\\
-                        0 & 0           & 1
-                  \end{bmatrix}^4 =
-                   \begin{bmatrix}
-                      \bar{1} & 1 & 0\\
-                      \bar{1} & 0 & 0\\
-                      0 &           0 & 1
-              \end{bmatrix}.
-    \end{equation}
-    Afterthat, by reflected in a plane perpendicular to the $\bm{a}$-axis, the corresponding matrix is 
-    $R = \left[\begin{smallmatrix}
-        \bar{1} & 0 & 0\\
-        0           & 1 & 0\\
-        0           & 0 & 1
-    \end{smallmatrix}\right]$,
-    thus the whole matrix will be 
-    \begin{equation}
-        M' = M R =\begin{bmatrix}
-                             \bar{1} & 1 & 0\\
-                             \bar{1} & 0 & 0\\
-                             0 &           0 & 1
-                        \end{bmatrix}
-                        \begin{bmatrix}
-                                \bar{1} & 0 & 0\\
-                                0           & 1 & 0\\
-                                0           & 0 & 1
-                        \end{bmatrix} = 
-                        \begin{bmatrix}
-                                1 & 1 & 0\\
-                                1 & 0 & 0\\
-                                0 & 0 & 1
-                        \end{bmatrix}.
-    \end{equation}
-    So a general point $(x, y, z)$ will be sent to $(x+y, x, z)$.
-    \item The mirror plane $m \hkl[-1 1 0]$ and $m \hkl[1 -1 0]$ are equivalent, so they have the same matrix representation
-    $M = \left[\begin{smallmatrix}
-                        0 & 1 & 0\\
-                        1 & 0 & 0\\
-                        0 & 0 & 1
-    \end{smallmatrix}
-    \right]$, the matrix of rotation by \SI{180}{\degree} is 
-    $R = \left[\begin{smallmatrix}
-                    0 & 1 & 0\\
-                    1 & 0 & 0\\
-                    0 & 0 & \bar{1}
-    \end{smallmatrix}
-    \right]$, thus the whole matrix is
-    \begin{equation}
-            M' = M R = \begin{bmatrix}
-                                    1 & 0 & 0\\
-                                    0 & 0 & 1\\
-                                    0 & 1 & 0
-                            \end{bmatrix}
-                            \begin{bmatrix}
-                                   0 & 1 & 0\\
-                                   1 & 0 & 0\\
-                                   0 & 0 & \bar{1}
-                            \end{bmatrix} = 
-                            \begin{bmatrix}
-                                    1 & 0 & 0\\
-                                    0 & 1 & 0\\
-                                    0 & 0 & \bar{1}
-                            \end{bmatrix}.
-    \end{equation}
-    So a general point $(x, y, z)$ will be sent to $(x, y, -z)$.
+        \item For a six-fold rotation axis, each operation will rotate the original point by \SI{60}{\degree}, so it requires $4$ times of rotation.
+              That is to say, the matrix is
+              \begin{equation}
+                      M = \begin{bmatrix}
+                              1 & \bar{1} & 0 \\
+                              1 & 0       & 0 \\
+                              0 & 0       & 1
+                      \end{bmatrix}^4 =
+                      \begin{bmatrix}
+                              \bar{1} & 1 & 0 \\
+                              \bar{1} & 0 & 0 \\
+                              0       & 0 & 1
+                      \end{bmatrix}.
+              \end{equation}
+              Afterthat, by reflected in a plane perpendicular to the $\bm{a}$-axis, the corresponding matrix is
+              $R = \left[\begin{smallmatrix}
+                                      \bar{1} & 0 & 0\\
+                                      0           & 1 & 0\\
+                                      0           & 0 & 1
+                              \end{smallmatrix}\right]$,
+              thus the whole matrix will be
+              \begin{equation}
+                      M' = M R =\begin{bmatrix}
+                              \bar{1} & 1 & 0 \\
+                              \bar{1} & 0 & 0 \\
+                              0       & 0 & 1
+                      \end{bmatrix}
+                      \begin{bmatrix}
+                              \bar{1} & 0 & 0 \\
+                              0       & 1 & 0 \\
+                              0       & 0 & 1
+                      \end{bmatrix} =
+                      \begin{bmatrix}
+                              1 & 1 & 0 \\
+                              1 & 0 & 0 \\
+                              0 & 0 & 1
+                      \end{bmatrix}.
+              \end{equation}
+              So a general point $(x, y, z)$ will be sent to $(x+y, x, z)$.
+        \item The mirror plane $m \hkl[-1 1 0]$ and $m \hkl[1 -1 0]$ are equivalent, so they have the same matrix representation
+              $M = \left[\begin{smallmatrix}
+                                      0 & 1 & 0\\
+                                      1 & 0 & 0\\
+                                      0 & 0 & 1
+                              \end{smallmatrix}
+                              \right]$, the matrix of rotation by \SI{180}{\degree} is
+              $R = \left[\begin{smallmatrix}
+                                      0 & 1 & 0\\
+                                      1 & 0 & 0\\
+                                      0 & 0 & \bar{1}
+                              \end{smallmatrix}
+                              \right]$, thus the whole matrix is
+              \begin{equation}
+                      M' = M R = \begin{bmatrix}
+                              1 & 0 & 0 \\
+                              0 & 0 & 1 \\
+                              0 & 1 & 0
+                      \end{bmatrix}
+                      \begin{bmatrix}
+                              0 & 1 & 0       \\
+                              1 & 0 & 0       \\
+                              0 & 0 & \bar{1}
+                      \end{bmatrix} =
+                      \begin{bmatrix}
+                              1 & 0 & 0       \\
+                              0 & 1 & 0       \\
+                              0 & 0 & \bar{1}
+                      \end{bmatrix}.
+              \end{equation}
+              So a general point $(x, y, z)$ will be sent to $(x, y, -z)$.
 \end{enumerate}
 
 \section*{4}
 \begin{enumerate}[a.]
         \item The matrix is
-        \begin{equation}
-         M = M_1 M_2 = 
-                \begin{bmatrix}
-                       1 & 0 & 0\\
-                       0 & 1 & 0\\
-                       0 & 0 & \bar{1}
-                \end{bmatrix}
-                \begin{bmatrix}
-                        0 & \bar{1} & 0\\
-                        \bar{1} & 0 & 0\\
-                        0 & 0 & 1
-                \end{bmatrix} = 
-                \begin{bmatrix}
-                        0 & \bar{1} & 0\\
-                        \bar{1} & 0 & 0\\
-                        0 & 0 & \bar{1}
-                \end{bmatrix}.
-        \end{equation}
-        So a general point $(x, y, z)$ will be sent to $(-y, -x, -z)$. The pattern is drawn below.
+              \begin{equation}
+                      M = M_1 M_2 =
+                      \begin{bmatrix}
+                              1 & 0 & 0       \\
+                              0 & 1 & 0       \\
+                              0 & 0 & \bar{1}
+                      \end{bmatrix}
+                      \begin{bmatrix}
+                              0       & \bar{1} & 0 \\
+                              \bar{1} & 0       & 0 \\
+                              0       & 0       & 1
+                      \end{bmatrix} =
+                      \begin{bmatrix}
+                              0       & \bar{1} & 0       \\
+                              \bar{1} & 0       & 0       \\
+                              0       & 0       & \bar{1}
+                      \end{bmatrix}.
+              \end{equation}
+              So a general point $(x, y, z)$ will be sent to $(-y, -x, -z)$. The pattern is drawn below.
         \item Yes. The matrix corresponds to $2 \hkl[1 -1 0]$. And the symmetry element is a two-fold rotation axis.
-        \item The matrix of the axis is 
-        $\left[\begin{smallmatrix}
-                \bar{1} & 0 & 0\\
-                0           & \bar{1} & 0\\
-                0              & 0     & 1
-        \end{smallmatrix}\right]$,
-        and the matrix of the mirror is
-        $\left[\begin{smallmatrix}
-                1 & 0 & 0\\
-                0 & 1 & 0\\
-                0 & 0 & \bar{1}
-        \end{smallmatrix}\right]$. Thus the whole matrix is
-        \begin{equation}
-                M = M_1 M_2 = 
-                \begin{bmatrix}
-                         \bar{1} & 0 & 0\\
-                         0           & \bar{1} & 0\\
-                         0              & 0     & 1
-                \end{bmatrix}
-                \begin{bmatrix}
-                        1 & 0 & 0\\
-                        0 & 1 & 0\\
-                        0 & 0 & \bar{1}
-                \end{bmatrix} = 
-                \begin{bmatrix}
-                        \bar{1} & 0 & 0\\
-                        0        & \bar{1} & 0\\
-                        0        & 0           & \bar{1}
-                \end{bmatrix}.
-        \end{equation}
-        Thus a general point $(x, y, z)$ will be sent to $(-x, -y, -z)$. The pattern is drawn below.
+        \item The matrix of the axis is
+              $\left[\begin{smallmatrix}
+                                      \bar{1} & 0 & 0\\
+                                      0           & \bar{1} & 0\\
+                                      0              & 0     & 1
+                              \end{smallmatrix}\right]$,
+              and the matrix of the mirror is
+              $\left[\begin{smallmatrix}
+                                      1 & 0 & 0\\
+                                      0 & 1 & 0\\
+                                      0 & 0 & \bar{1}
+                              \end{smallmatrix}\right]$. Thus the whole matrix is
+              \begin{equation}
+                      M = M_1 M_2 =
+                      \begin{bmatrix}
+                              \bar{1} & 0       & 0 \\
+                              0       & \bar{1} & 0 \\
+                              0       & 0       & 1
+                      \end{bmatrix}
+                      \begin{bmatrix}
+                              1 & 0 & 0       \\
+                              0 & 1 & 0       \\
+                              0 & 0 & \bar{1}
+                      \end{bmatrix} =
+                      \begin{bmatrix}
+                              \bar{1} & 0       & 0       \\
+                              0       & \bar{1} & 0       \\
+                              0       & 0       & \bar{1}
+                      \end{bmatrix}.
+              \end{equation}
+              Thus a general point $(x, y, z)$ will be sent to $(-x, -y, -z)$. The pattern is drawn below.
         \item Yes. The symmetry operator is $i$. The center of symmetry is $(0, 0, 0)$.
 \end{enumerate}
 
-\end{document} 
+\end{document}
